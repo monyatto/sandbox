@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポメラニアン vs エイリアン クイズ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- スタート画面 -->
+    <div id="start-screen" class="screen active">
+        <div class="container">
+            <h1>ポメラニアン vs エイリアン</h1>
+            <h2>早押しクイズ</h2>
+            <p>AAで表示されるのはポメラニアン？それともエイリアン？</p>
+            <p>10問正解するまでのタイムを競おう！</p>
+            <div class="controls-info">
+                <p><strong>操作方法:</strong></p>
+                <p>ボタンクリック or キーボード（1/P: ポメラニアン、2/A: エイリアン）</p>
+            </div>
+            <button id="start-btn" class="btn btn-primary">ゲームスタート</button>
+        </div>
+    </div>
+
+    <!-- ゲーム画面 -->
+    <div id="game-screen" class="screen">
+        <div class="container">
+            <div class="game-header">
+                <div class="question-info">
+                    <span id="question-number">正解: 0/10 (問題1)</span>
+                    <span id="timer">時間: 0.00s</span>
+                </div>
+            </div>
+
+            <div class="aa-display">
+                <pre id="aa-art"></pre>
+            </div>
+
+            <div class="answer-buttons">
+                <button id="pomeranian-btn" class="btn btn-answer">ポメラニアン</button>
+                <button id="alien-btn" class="btn btn-answer">エイリアン</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </div>
+
+    <!-- リザルト画面 -->
+    <div id="result-screen" class="screen">
+        <div class="container">
+            <h2>ゲーム終了！</h2>
+            <div class="result-stats">
+                <div class="stat">
+                    <span class="stat-label">総時間</span>
+                    <span id="total-time" class="stat-value">0.00s</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">正解数</span>
+                    <span id="final-score" class="stat-value">0/10</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">正解率</span>
+                    <span id="accuracy" class="stat-value">0%</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">平均回答時間</span>
+                    <span id="average-time" class="stat-value">0.00s</span>
+                </div>
+            </div>
+            <button id="restart-btn" class="btn btn-primary">もう一度プレイ</button>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
